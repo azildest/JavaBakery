@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class AdminViewDemo {
     public static void menuAdmin(Admin admin) {
         int menu = 0;
-        boolean keluar = false;
+        boolean keluar = false; 
         char pilihan;
         Scanner scanner;
 
