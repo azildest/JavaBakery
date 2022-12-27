@@ -7,7 +7,7 @@ package com.itenas.javabakery.view;
 import com.itenas.javabakery.pojo.Admin;
 import com.itenas.javabakery.service.AdminService;
 import com.itenas.javabakery.serviceimpl.AdminServiceImpl;
-import java.util.Scanner;
+import java.util.Scanner; 
 
 /**
  *

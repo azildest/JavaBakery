@@ -7,7 +7,6 @@ package com.itenas.javabakery.repository;
 import java.util.List;
 
 /**
- *
  * @author Azzahra
  * @param <T>
  * @param <ID>
