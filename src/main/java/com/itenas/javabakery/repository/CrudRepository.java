@@ -12,6 +12,7 @@ import java.util.List;
  * @param <T>
  * @param <ID>
  */
+ 
 public interface CrudRepository<T, ID> {
     List<T> findAll();
     ID create(T object);
