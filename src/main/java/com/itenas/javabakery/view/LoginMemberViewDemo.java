@@ -4,44 +4,45 @@
  */
 package com.itenas.javabakery.view;
 
-import com.itenas.javabakery.pojo.Customer;
+import com.itenas.javabakery.pojo.Member;
 import com.itenas.javabakery.service.AkunService;
 import com.itenas.javabakery.serviceimpl.AkunServiceImpl;
 import java.util.Scanner;
 
 /**
  *
- * @author acer
+ * @author HP
  */
-public class LoginCustomerViewDemo {
-
+public class LoginMemberViewDemo {
+       
     public static void login() {
         Scanner s = new Scanner(System.in);
         AkunService akunService = new AkunServiceImpl();
-        Customer customer;
+        Member member;
         String username, password;
         boolean login = false;
 
         do {
-            System.out.println("\n+-------------------------------------------+");
-            System.out.println("|LOGIN CUSTOMER                                      |");
-            System.out.println("+-------------------------------------------+");
+            System.out.println("+-------------------+");
+            System.out.println("|   LOGIN Member    |");
+            System.out.println("+-------------------+");
             System.out.println("| Username: ");
             username = s.nextLine();
             System.out.println("| Password: ");
             password = s.nextLine();
-            System.out.println("+-------------------------------------------+");
+            System.out.println("+-------------------+");
             System.out.println();
-            customer = akunService.login(username, password);
-            if (customer != null) {
+            member = akunService.login(username, password);
+            if (member != null) {
                 login = true;
-                customer.setLoginStatus(true);
-                System.out.println("Login berhasil...!");
+                member.setLoginStatus(true);
+                System.out.println("Login berhasil");
                 System.out.println("");
-                CustomerViewDemo.menuCustomer(customer);
+                MemberViewDemo.menuMember(member);
             } else {
-                System.out.println("Username atau password yang Anda masukkan salah, coba lagi...!");
+                System.out.println("Username atau Password yang Anda masukkan salah");
             }
         } while (!login);
     }
 }
+
