@@ -59,12 +59,11 @@ public class KaryawanServiceImpl implements KaryawanService {
     @Override
     public Integer create(Karyawan object) {
         int result = 0;
-        String sql = "INSERT INTO kARYAWAN(NAMA_KARYAWAN, ALAMAT KARYAWAN, JENIS_KELAMIN, UMUR_KARYAWAN, ID_KARYAWAN, NO.TELPON) "
-                + "VALUES('"+object.getId()+"', "
-                + "'"+object.getNamaKaryawan()+"', "
-                + "'"+object.getAlamatKaryawan()+"', "
-                + "'"+object.getUmurKaryawan()+"', "
+        String sql = "INSERT INTO kARYAWAN(nama, umur, jenis_kelamin, alamat, nomor_telepon) "
+                + "VALUES('"+object.getNamaKaryawan()+"', "
+                + ""+object.getUmurKaryawan()+", "
                 + "'"+object.getJenisKelamin()+"', "
+                + "'"+object.getAlamatKaryawan()+"', "
                 + "'"+object.getNoTeleponKaryawan()+"')";
         
         conMan = new ConnectionManager();

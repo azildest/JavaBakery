@@ -39,7 +39,7 @@ public class AdminServiceImpl implements AdminService {
         conMan = new ConnectionManager();
         conn = conMan.connect();
         
- /*       try {
+        try {
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             
@@ -57,9 +57,9 @@ public class AdminServiceImpl implements AdminService {
             }
             conMan.disconnect();
         } catch (SQLException ex) {
-            Logger.getLogger(Member/CustomerServiceImpl.class.getName())
+            Logger.getLogger(MemberServiceImpl.class.getName())
                     .log(Level.SEVERE, null, ex);
         }
         return admin;
-    } */
+    }
 }

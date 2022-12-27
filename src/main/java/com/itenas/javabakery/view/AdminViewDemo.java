@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Kurnia R. Putra
+ * @author acer
  */
 public class AdminViewDemo {
     public static void menuAdmin(Admin admin) {
@@ -42,7 +42,7 @@ public class AdminViewDemo {
                     ManageProdukViewDemo.viewManageProduk();
                 break;
                 case 3:
-                    ManageCustomerViewDemo.viewManageCustomer();
+                    ManageMemberViewDemo.viewManageCustomer();
                 break;
                 case 4:
                     RekapPenjualanViewDemo.viewRekapPenjualan();
