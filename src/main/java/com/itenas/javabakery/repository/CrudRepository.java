@@ -8,10 +8,11 @@ import java.util.List;
 
 /**
  *
- * @author Kurnia R. Putra
- * @param <T> Type
- * @param <ID> Identifier
+ * @author Azzahra
+ * @param <T>
+ * @param <ID>
  */
+ 
 public interface CrudRepository<T, ID> {
     List<T> findAll();
     ID create(T object);
