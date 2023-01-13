@@ -26,8 +26,6 @@ public class MemberServiceImpl implements MemberService {
     Statement stmt;
     ResultSet rs;
     
-
-    
     @Override
     public List<Member> findAll() {
         List<Member> listMember = new ArrayList<>();
@@ -84,7 +82,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public Integer update(Member object) {
-    int result = 0;
+        int result = 0;
         String sql = "UPDATE member SET"
                 + "namaMember='"+object.getNamaMember()+"', "
                 + "umurMember="+object.getUmurMember()+", "
@@ -107,9 +105,9 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public Member findById(int id) {
-    Member member = null;
-        String sql = "SELECT * FROM member WHERE id="+id+"";
+    public Member findByName(String name) {
+        Member member = null;
+        String sql = "SELECT * FROM member WHERE namaMember LIKE '%"+name+"%' ";
         
         conMan = new ConnectionManager();
         conn = conMan.connect();
@@ -136,7 +134,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public Integer delete(int id) {
-    int result = 0;
+        int result = 0;
         String sql = "DELETE FROM member WHERE id="+id+"";
         
         conMan = new ConnectionManager();
@@ -151,6 +149,46 @@ public class MemberServiceImpl implements MemberService {
                     .log(Level.SEVERE, null, ex);
         }
         return result;
+    }
+
+    @Override
+    public List<Member> sortByCondition1() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public List<Member> sortByCondition2() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public List<Member> sortByCondition3() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public List<Member> sortByCondition4() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Member findByNama(String name) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public List<Member> findAllTersedia() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Member addProduct(String username, Member object) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Member addAvailableProduct(String username, Member object) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

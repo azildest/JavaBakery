@@ -7,7 +7,11 @@ package com.itenas.javabakery.repository;
 /**
  *
  * @author acer
+ * @param <T>
+ * @param <ID>
  */
 public interface AkunRepository<T, ID> {
     T login(String username, String password);
+    boolean register(String username, String password, String nama, String alamat, String noTelp);
+    T update(String username, String password, int id);
 }

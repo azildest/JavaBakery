@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Kurnia R. Putra
+ * @author acer
  */
 public class LandingPageViewDemo {
     
@@ -47,7 +47,7 @@ public class LandingPageViewDemo {
                     LoginAdminViewDemo.login();
                 break;
                 case 2:
-                    LoginDokterViewDemo.login();
+                    LoginMemberViewDemo.login();
                 break;
                 case 3:
                     System.out.println("Keluar aplikasi...!");
