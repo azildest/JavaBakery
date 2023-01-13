@@ -4,6 +4,7 @@
  */
 package com.itenas.javabakery.repository;
 
+import com.itenas.javabakery.pojo.Produk;
 import java.util.List;
 
 /**
@@ -13,8 +14,16 @@ import java.util.List;
  */
 public interface CrudRepository<T, ID> {
     List<T> findAll();
+    List<T> findAllTersedia();
     ID create(T object);
     ID update(T object);
-    T findById(int id);
+    T findByName(String name);
+    T addProduct(String username, T object);
+    T addAvailableProduct(String username, T object);
+    T findByNama(String name);
     ID delete(int id);
+    List<T> sortByCondition1();
+    List<T> sortByCondition2();
+    List<T> sortByCondition3();
+    List<T> sortByCondition4();
 }

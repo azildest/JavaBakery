@@ -15,6 +15,7 @@ public class Karyawan {
     private int umurKaryawan;
     private String AlamatKaryawan;
     private String noTeleponKaryawan;
+    byte[] image;
 
     public Karyawan() {
     }
@@ -76,12 +77,12 @@ public class Karyawan {
     public void setNoTeleponKaryawan(String noTeleponKaryawan) {
         this.noTeleponKaryawan = noTeleponKaryawan;
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
 }

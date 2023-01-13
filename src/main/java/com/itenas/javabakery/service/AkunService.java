@@ -4,6 +4,7 @@
  */
 package com.itenas.javabakery.service; 
 
+import com.itenas.javabakery.pojo.Akun;
 import com.itenas.javabakery.pojo.Member;
 import com.itenas.javabakery.repository.AkunRepository;
 
@@ -12,6 +13,6 @@ import com.itenas.javabakery.repository.AkunRepository;
  * @author acer
  */
 
-public interface AkunService extends AkunRepository <Member, Integer> {
+public interface AkunService extends AkunRepository <Akun, Integer> {
     
 }
