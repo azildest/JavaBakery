@@ -14,6 +14,11 @@ public class Akun {
     private String username;
     private String password;
     private String level;
+    private String nama;
+    private String alamat;
+    private String noTelp;
+    private boolean loginStatus;
+    private Akun akun;
 
     public Akun() {
     }
@@ -56,6 +61,46 @@ public class Akun {
 
     public void setLevel(String level) {
         this.level = level;
+    }
+
+    public boolean isLoginStatus() {
+        return loginStatus;
+    }
+
+    public void setLoginStatus(boolean loginStatus) {
+        this.loginStatus = loginStatus;
+    }  
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
+    public String getNoTelp() {
+        return noTelp;
+    }
+
+    public void setNoTelp(String noTelp) {
+        this.noTelp = noTelp;
+    }
+
+    public Akun getAkun() {
+        return akun;
+    }
+
+    public void setAkun(Akun akun) {
+        this.akun = akun;
     }
     
     

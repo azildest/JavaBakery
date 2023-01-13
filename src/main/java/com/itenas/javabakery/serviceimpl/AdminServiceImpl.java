@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.itenas.javabakery.serviceimpl;
+package com.itenas.javabakery.serviceimpl; 
 
 import com.itenas.javabakery.pojo.Admin;
 import com.itenas.javabakery.pojo.Akun;
@@ -30,7 +30,7 @@ public class AdminServiceImpl implements AdminService {
         Admin admin = null;
         Akun akun = null;
         String sql = "SELECT ad.id, ad.nama_depan, ad.nama_belakang, "
-                + "ak.id_akun, ak.email, ak.username, ak.level "
+                + "ak.id_akun, ak.username, ak.level "
                 + "FROM admin ad, akun ak "
                 + "WHERE ad.id_akun = ak.id_akun "
                 + "AND ak.username = '" + username + "' "
@@ -39,7 +39,7 @@ public class AdminServiceImpl implements AdminService {
         conMan = new ConnectionManager();
         conn = conMan.connect();
         
- /*       try {
+        try {
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             
@@ -50,16 +50,25 @@ public class AdminServiceImpl implements AdminService {
                 admin.setNamaBelakang(rs.getString("nama_belakang"));
                 akun = new Akun();
                 akun.setId(rs.getInt("id_akun"));
-                akun.setEmail(rs.getString("email"));
                 akun.setUsername(rs.getString("username"));
                 akun.setLevel(rs.getString("level"));
                 admin.setAkun(akun);
             }
             conMan.disconnect();
         } catch (SQLException ex) {
-            Logger.getLogger(Member/CustomerServiceImpl.class.getName())
+            Logger.getLogger(MemberServiceImpl.class.getName())
                     .log(Level.SEVERE, null, ex);
         }
         return admin;
-    } */
+    }
+
+    @Override
+    public boolean register(String username, String password, String nama, String alamat, String noTelp) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Admin update(String username, String password, int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
