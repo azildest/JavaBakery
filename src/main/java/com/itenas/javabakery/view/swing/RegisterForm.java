@@ -13,7 +13,6 @@ import com.itenas.javabakery.service.MemberService;
 import com.itenas.javabakery.serviceimpl.AdminServiceImpl;
 import com.itenas.javabakery.serviceimpl.AkunServiceImpl;
 import com.itenas.javabakery.serviceimpl.MemberServiceImpl;
-import com.itenas.javabakery.view.AdminViewDemo;
 import java.awt.HeadlessException;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
